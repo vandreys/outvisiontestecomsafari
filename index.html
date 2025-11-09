@@ -3,14 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="./script.js"></script>
+    <title>Cross-Platform AR Cube</title>
     <style>
-      body {margin: 0}
-        #ar-button {position:fixed; z-index: 1001; padding: 1vh; bottom: 1vh;left: 50%; transform: translateX(-50%)}
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #000;
+      }
+
+      #ar-button {
+        position: fixed;
+        z-index: 1001;
+        padding: 1vh 2vh;
+        bottom: 2vh;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+        background: #00b894;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      #ar-button:disabled {
+        background: gray;
+        cursor: not-allowed;
+      }
     </style>
-    <title>AR</title>
+
+    <script type="module" src="./script.js"></script>
   </head>
   <body>
-    <button id="ar-button">Start</button>
+    <button id="ar-button">Start AR</button>
   </body>
 </html>
