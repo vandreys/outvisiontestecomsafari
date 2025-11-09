@@ -10,12 +10,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     // --- AR Quick Look (iPhone/iPad) ---
     const link = document.createElement("a");
     link.rel = "ar";
-    link.href = "./cube.usdz"; // seu modelo USDZ
+    link.href = "/seahorse_anim_mtl_variant.usdz"; // seu modelo 3D em USDZ
     link.appendChild(arButton);
     document.body.appendChild(link);
 
-    // Opcional: botão com preview
-    arButton.textContent = "View in AR (iOS)";
+    arButton.textContent = "View Seahorse in AR (iOS)";
     return;
   }
 
@@ -36,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   renderer.setPixelRatio(window.devicePixelRatio);
   document.body.appendChild(renderer.domElement);
 
-  // Cria um cubo verde
+  // Cria um cubo verde (visualização Android/WebXR)
   const geometry = new THREE.BoxGeometry(0.06, 0.06, 0.06);
   const material = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
   const cube = new THREE.Mesh(geometry, material);
